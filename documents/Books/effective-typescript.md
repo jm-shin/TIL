@@ -110,3 +110,59 @@ const people: Person[] = ['alice', 'bob', 'jan'].map(
 - 객체 리터럴을 변수에 할당하거나 함수에 매개변수로 전달할 때 잉여 속성 체크가 수행됨.
 - 잉여 속성 체크는 오류를 찾는 효과적인 방법이지만, ts 타입 체커가 수행하는 일반적인 구조적 할당 가능성 체크와 역할이 다름.
 - 잉여 속성 체크에는 한계가 있다. 임시 변수를 도입하면 잉여 속성 체크를 건너뛸 수 있다.
+
+## 아이템12. 함수 표현식에 타입 적용하기
+
+```ts
+declare function fetch(
+    input: RequestInfo, init?: RequestInit
+): Promise<Response>
+
+const checkedFetch: typeof fetch = async (input, init) => {
+    const response = await fetch(input, init);
+    if (!response.ok) {
+        // 비동기 함수 내에서 거절된 프로미스로 변환
+        throw new Error('Request failed: ' + response.status);
+    }
+    return response;
+}
+```
+
+- 매개변수나 반환 값에 타입을 명시하기보다는 함수 표현식 전체에 타입 구문을 적용하는 것이 좋다.
+- 만약 같은 타입 시그니처를 반복적으로 작성한 코드가 있다면 함수 타입을 분리해 내거나 이미 존재하는 타입을 찾아보기. 라이브러리를 직접 만든다면 공통 콜백에 타입을 제공해야 한다.
+- 다른 함수의 시그니처를 참조하려면 typeof fn을 사용.
+
+## 아이템 13. 타입과 인터페이스의 차이점 알기
+
+- 인터페이스는 유니온 타입같은 복잡한 타입을 확장하지는 못함. 복잡한 타입을 확장하고 싶다면 타입과 &을 사용해야함.
+- 클래스 구현(implements)할 때는, 타입과 인터페이스 둘 다 사용가능.
+
+```ts
+// 듀플과 배열 타입은 type 키워드로 보다 간결하게 표현 가능.
+type Pair = [number, number];
+type StringList = string[];
+type NameNums = [string, ...number[]];
+```
+
+```ts
+// 인터페이스는 타입에는 없는 몇 가지 기능 존재. 보강(augment)이 가능. 선언 병합(declaration merging)
+interface State {
+    name: string;
+    capital: string;
+}
+
+interface State {
+    population: number;
+}
+
+const wyoming: State = {
+    name: 'Wyoming',
+    capital: 'Cheyenne',
+    population: 500_000
+}; //정상
+```
+
+- 복잡한 타입이라면 고민할 필요없이 type 사용. 하지만 간단한 객체 타입이라면 일관성과 보강의 관점에서 interface 고려도 필요.
+- 즉, 프로젝트 스타일에 맞춰 사용.
+- 스타일이 확립되지 않은 프로젝트라면 어떤 API에 대한 타입 선언을 작성해야한다면 interface를 사용하는 것이 좋음. API가 변경될 때 사용자가 인터페이스를 통해 새로운 필드를 병합할 수 있어 유용.
+- 그러나 내부적으로 사용되는 타입에 선언 병합이 발생하는 것은 잘못된 설계. 따라서 이럴땐 type을 사용.
