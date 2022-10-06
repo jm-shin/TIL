@@ -166,3 +166,59 @@ const wyoming: State = {
 - 즉, 프로젝트 스타일에 맞춰 사용.
 - 스타일이 확립되지 않은 프로젝트라면 어떤 API에 대한 타입 선언을 작성해야한다면 interface를 사용하는 것이 좋음. API가 변경될 때 사용자가 인터페이스를 통해 새로운 필드를 병합할 수 있어 유용.
 - 그러나 내부적으로 사용되는 타입에 선언 병합이 발생하는 것은 잘못된 설계. 따라서 이럴땐 type을 사용.
+
+## 아이템 14. 타입 연산과 제네릭 사용으로 반복 줄이기
+
+```ts
+type TopNavState = Pick<State, 'userId' | 'pageTitle' | 'recentFiles'>; 
+```
+
+```ts
+interface Options {
+    width: number;
+    height: number;
+    color: number;
+    label: number;
+}
+
+interface OptionsUpdate {
+    width?: number;
+    height?: number;
+    color?: number;
+    label?: number;
+}
+
+type OptionsUpdate = { [k in keyof Options]?: Options[k] };
+```
+
+- DRY 원칙 (don't repeat yourself)
+- 타입에 이름을 붙여 반복을 피해야함. extends를 사용해서 인터페이스 필드의 반복을 피함.
+- 타입들 간의 매핑을 위한 keyof, typeof, 인덱싱 등 알아둘것
+- 제네릭 타입은 타입을 위한 함수와 같다. 타입을 반복하는 대신 제네릭 타입을 사용하여 타입들간의 매핑을 하는 것이 좋다.
+- Pick, Partial, ReturnType 같은 제네릭 타입에 익숙해져야함.
+
+## 아이템 15. 동적 데이터에 인덱스 시그니처 사용하기
+
+```ts
+type Rocket = { [property: string]: string };
+const rocket: Rocket = {
+    name: 'Falcon 9',
+    variant: 'v1.0',
+    thrust: '4,940kN',
+}; // 정상
+```
+
+[property: string]: string 가 인덱스 시그니처. 다음과 같은 세 가지 의미
+
+- 키의 이름: 키의 위치만 표시하는 용도. 타입체커에서는 사용x
+- 키의 타입: string, number, symbol의 조합이어야하지만 보통은 string 사용.
+- 값의 타입: 어떤 것이든 가능. 단점
+- 잘못된 키를 포함한 모든 키를 허용. name 대신 Name이 들어와도 유효.
+- 특정 키가 필요하지 않음. {}도 유효.
+- 키마다 다른 타입을 갖지 못함.
+
+#### 요약
+
+- 런타입 때까지 객체의 속성을 알 수 없을 경우에만 인덱스 시그니처를 사용.
+- 안전한 접근을 위해 인덱스 시그니처의 값 타입에 undefined를 추가하는 것을 고려.
+- 가능하면 인터페이스, Record, 매핑된 타입 같은 인덱스 시그니처보다 정확한 타입을 사용 권장.
