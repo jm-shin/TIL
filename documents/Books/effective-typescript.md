@@ -531,3 +531,10 @@ const snowLeopard: Animal = {
 ## 아이템 43. 몽키 패치보다는 안전한 타입을 사용하기
 
 ## 아이템 44. 타입 커버리지를 추적하여 타입 안정성을 유지하기
+
+- noImplicitAny가 설정되어 있어도, 명시적 any 또는 서드파티 타입 선언(@type)을 통해 any 타입은 코드 내에 여전히 존재할 수 있다는 점을 주의.
+
+## 아이템 45. devDependencies에 typescript와 @types 추가하기
+
+- 타입스크립트를 시스템 레벨로 설치하면 안 됩니다. 타입스크립트를 프로젝트의 devDependencies에 포함시키고 팀원 모두가 동일한 버전을 사용하도록 해야함.
+- @type 의존성은 dependencies가 아니라 devDependencies에 포함시켜야 함. 런타임에 @type이 필요한 경우라면 별도의 작업 필요할 수 있음.
