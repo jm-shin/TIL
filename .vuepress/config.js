@@ -1,4 +1,6 @@
-// config.js
+const path = require('path');
+let {getArticles} = require(path.resolve('.vuepress/dong_util'))
+
 module.exports = {
   title: '개발자 신종민',
   description: 'Today I Learned',
@@ -9,7 +11,18 @@ module.exports = {
       {text: 'About', link: '/About/'},
     ],
     lastUpdated: true,
-    sidebar: 'auto',
+    sidebar: [
+      {
+        title: 'Vuepress',
+        collapsable: true,
+        children: getArticles('vuejs/vuepress')
+      },
+      {
+        title: 'Books',
+        collapsable: true,
+        children: getArticles('Books')
+      }
+    ],
     smoothScroll: true
   },
   base: '/TIL/',
