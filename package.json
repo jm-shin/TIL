@@ -5,7 +5,7 @@
   "repository": "https://github.com/jm-shin/TIL.git",
   "author": "jongminshin <ace4463@gmail.com>",
   "scripts": {
-    "docs:dev": "vuepress dev --port 8000",
+    "docs:dev": "vuepress dev",
     "docs:build": "vuepress build"
   },
   "license": "MIT",
