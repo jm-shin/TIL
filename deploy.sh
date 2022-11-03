@@ -18,6 +18,9 @@ git commit -m 'deploy'
 # git push -f https://github.com/<USERNAME>/<USERNAME>.github.io.git master
 
 # https://<USERNAME>.github.io/<REPO> 에 배포하는 경우
+# git push -f https://github.com/jm-shin/TIL.git master:gh-pages
+
+# TIL repository에 배포하기 때문에 아래와 같이 작성했다.
 git push -f https://github.com/jm-shin/TIL.git master:gh-pages
 
 cd -
