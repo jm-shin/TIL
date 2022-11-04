@@ -1,6 +1,3 @@
 # Today I Learned
 
-vuepress로 만든 blog
-
-- github 댓글 추가
-- github actions로 자동배포
+우리는 끊임없이 새로운 것을 배웁니다. 그 배움을 공유하는 레포입니다. TIL은 우리가 최근에 배운 개념, 구문, 명령 또는 팁을 설명하는 짧은 Markdown 문서(몇 문장 + 예제 코드)입니다.
