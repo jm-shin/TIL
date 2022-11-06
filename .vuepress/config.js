@@ -15,7 +15,7 @@ module.exports = {
       {
         title: 'Vuepress',
         collapsable: true,
-        children: getArticles('vuejs/vuepress')
+        children: getArticles('Vuepress')
       },
       {
         title: 'Books',
