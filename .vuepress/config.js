@@ -1,9 +1,10 @@
 const path = require('path');
-let {getArticles} = require(path.resolve('.vuepress/dong_util'))
+let { getArticles } = require(path.resolve('.vuepress/util'))
 
 module.exports = {
   title: '개발자 신종민',
   description: 'Today I Learned',
+  base: '/TIL/',
   themeConfig: {
     logo: 'https://avatars.githubusercontent.com/u/53161335?v=4',
     nav: [
@@ -11,6 +12,7 @@ module.exports = {
       {text: 'About', link: '/About/'},
     ],
     lastUpdated: true,
+    smoothScroll: true,
     sidebar: [
       {
         title: 'Vuepress',
@@ -21,9 +23,12 @@ module.exports = {
         title: 'Books',
         collapsable: true,
         children: getArticles('Books')
+      },
+      {
+        title: 'Linux',
+        collapsable: true,
+        children: getArticles('Linux')
       }
     ],
-    smoothScroll: true
   },
-  base: '/TIL/',
 }

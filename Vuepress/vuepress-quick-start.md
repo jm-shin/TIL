@@ -49,7 +49,7 @@ yarn add -D vuepress
 - 첫 번째 문서 만들기
 
 ```shell
-mkdir docs && echo '# Hello VuePress' > docs/README.md
+mkdir docs && echo '# Hello VuePress' > docs/lsof.md
 ```
 
 - package.json에 스크립트 추가
@@ -70,5 +70,7 @@ mkdir docs && echo '# Hello VuePress' > docs/README.md
 ```
 
 - http://localhost:8080 에서 핫 리로딩 개발 서버를 시작
+
+## vuepress config 설정
 
 <Comment/>
