@@ -67,6 +67,13 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 ```
 - source .zshrc
 
+## Git 설정
+- name과 email은 깃허브 Settings > Name, Public email 이랑 일치해야 함. 불일치시 잔디 안 심어짐.
+```shell
+git config --global user.name ""
+git config --global user.email ""
+```
+
 ## nvm 설치
 ## mysql 설치
 ## mongodb 설치
