@@ -28,6 +28,11 @@ module.exports = {
         title: 'Linux',
         collapsable: true,
         children: getArticles('Linux')
+      },
+      {
+        title: 'Mac',
+        collapsable: true,
+        children: getArticles('Mac')
       }
     ],
   },
