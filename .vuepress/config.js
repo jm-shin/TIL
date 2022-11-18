@@ -35,9 +35,9 @@ module.exports = {
         children: getArticles('Docker')
       },
       {
-        title: 'Mac',
+        title: 'ETC',
         collapsable: true,
-        children: getArticles('Mac')
+        children: getArticles('ETC')
       },
     ],
   },
