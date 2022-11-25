@@ -35,6 +35,11 @@ module.exports = {
         children: getArticles('Docker')
       },
       {
+        title: 'Database',
+        collapsable: true,
+        children: getArticles('Database')
+      },
+      {
         title: 'ETC',
         collapsable: true,
         children: getArticles('ETC')
