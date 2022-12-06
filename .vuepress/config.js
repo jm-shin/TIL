@@ -40,6 +40,11 @@ module.exports = {
         children: getArticles('Database')
       },
       {
+        title: 'Front',
+        collapsable: true,
+        children: getArticles('Front')
+      },
+      {
         title: 'ETC',
         collapsable: true,
         children: getArticles('ETC')
