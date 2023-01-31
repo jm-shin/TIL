@@ -47,3 +47,21 @@ kibana
 ```
 
 Kibana를 실행한 뒤 웹 브라우저를 열고 http://localhost:5601 로 접속
+
+## Homebrew 명령어
+
+https://docs.brew.sh/Manpage
+
+```shell
+brew upgrade [프로그램명]: homebrew에 설치된 프로그램 최선버전으로 업데이트
+brew tap: 패키지 저장소 확인
+brew tap [저장소태그]: 패키지 저장소 추가
+brew untap [저장소태그]: 패키지 저장소 삭제
+brew search [프로그램명] : homebrew를 통해 설치 가능한 프로그램 찾기
+brew list [cask] : horebrew 에 설치된 프로그램 목록
+brew info [cask] [프로그램명]: 프로그램 정보 보기
+brew install [cask] [프로그램명] : 프로그램 설치
+brew remove [cask] [프로그램명] : homebrew에 설치된 프로그램 삭제
+brew cleanup : 업데이트 후 필요없는 이전 버전의 패키지 삭제
+brew doctor: homebrew 의 현재상태 진단
+```
