@@ -15,9 +15,9 @@ module.exports = {
     smoothScroll: true,
     sidebar: [
       {
-        title: 'Vuepress',
+        title: 'Solution',
         collapsable: true,
-        children: getArticles('Vuepress')
+        children: getArticles('Solution')
       },
       {
         title: 'Books',
@@ -38,6 +38,11 @@ module.exports = {
         title: 'Database',
         collapsable: true,
         children: getArticles('Database')
+      },
+      {
+        title: 'Vuepress',
+        collapsable: true,
+        children: getArticles('Vuepress')
       },
       {
         title: 'Front',
