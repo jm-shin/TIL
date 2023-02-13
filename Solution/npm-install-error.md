@@ -44,7 +44,6 @@ npm install
 
 # 결과창: 아래처럼 정지되어 계속 펜딩
 (⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂) ⠧ idealTree:test: sill idealTree buildDeps
-
 ```
 
 그러나 npm 설치가 진행되지 않는 현상이 발생한다.
