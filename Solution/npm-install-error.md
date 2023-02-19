@@ -123,3 +123,11 @@ found 0 vulnerabilities
 # 해결법
 
 **ts-jest 패키지가 설치가 안되는 문제. package.json 목록에서 ts-jest를 제거하고 재설치.**
+
+추가로 찾아보니 2023년 1월 중순부터 ts-jest가 설치가 안되는 현상이 있다고한다.
+[해당 이슈](https://github.com/kulshekhar/ts-jest/issues/3992)는 npm 레지스트리에서 ts-jest 매니페스트가 kt망에서만 무응답을 한다고 한다. 한국 kt 사용자만 겪는
+문제인 것 같다.  
+현재(23년2월)는 원인을 파악중.  
+
+- [ts-jest 설치 안되는 현상](https://velog.io/@librarian/ts-jest-%EC%84%A4%EC%B9%98-%EC%95%88%EB%90%98%EB%8A%94-%ED%98%84%EC%83%81)   
+- [nest new aaa 설치 오류 문제 npx도 안돼요](https://www.inflearn.com/questions/753777/nest-new-aaa-%EC%84%A4%EC%B9%98-%EC%98%A4%EB%A5%98-%EB%AC%B8%EC%A0%9C-npx%EB%8F%84-%EC%95%88%EB%8F%BC%EC%9A%94)
