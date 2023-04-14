@@ -67,6 +67,23 @@ s 해시값 remove one, two
 4. 수정이 마무리되면 :wq로 편집화면 저장
 5. 커밋 메시지 하나로 통합해서 적어주기
 
+## Git Flow
+
+1. checkout origin develop
+2. develop 기준으로 feature 브랜치 생성
+3. code 작성
+4. feature 브랜치에서 develop 브랜치로 PR 및 코드리뷰 진행
+5. test 브랜치에서 feature 브랜치 병합 후 개발 환경에서 테스트 진행
+6. staging 브랜치에서 feature 브랜치 병합 후 QA 진행
+7. QA 통과 -> PR 완료해서 develop에 병합
+8. 병합 완료된 develop 브랜치에서 release/<배포버전> 브랜치 생성
+9. release 브랜치에서 버전명 변경 (package.json, package-lock.json) 후 커밋
+10. git switch master
+11. git merge release/<배포버전>
+12. git push
+13. develop 브랜치에서 배포된 태그(<배포버전>) 병합
+14. release/<배포버전> 브랜치 삭제. 병합된 feature 브랜치도 삭제
+
 ## Error Case
 
 ```shell
