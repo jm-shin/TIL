@@ -78,11 +78,13 @@ s 해시값 remove one, two
 7. QA 통과 -> PR 완료해서 develop에 병합
 8. 병합 완료된 develop 브랜치에서 release/<배포버전> 브랜치 생성
 9. release 브랜치에서 버전명 변경 (package.json, package-lock.json) 후 커밋
-10. git switch master
+10. master 브랜치로 - git switch master
 11. git merge release/<배포버전>
-12. git push
-13. develop 브랜치에서 배포된 태그(<배포버전>) 병합
-14. release/<배포버전> 브랜치 삭제. 병합된 feature 브랜치도 삭제
+12. git tag <배포버전> && git push origin <배포버전>
+13. 원격 마스터에 git push 
+14. develop 브랜치 이동 후 -> 배포된 태그(<배포버전>) 병합 
+15. release/<배포버전> 브랜치 삭제. 
+16. 배포 후 특이사항 없으면 병합 완료된 feature 브랜치도 삭제
 
 ## Error Case
 
