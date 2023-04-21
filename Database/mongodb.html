@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MongoDB | 개발자 신종민</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Today I Learned">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.13b71ac0.css" as="style"><link rel="preload" href="/TIL/assets/js/app.dc1d7481.js" as="script"><link rel="preload" href="/TIL/assets/js/2.24238b2e.js" as="script"><link rel="preload" href="/TIL/assets/js/14.507a7a1e.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.2d1379bb.js"><link rel="prefetch" href="/TIL/assets/js/11.ae4eb815.js"><link rel="prefetch" href="/TIL/assets/js/12.9b97d1f8.js"><link rel="prefetch" href="/TIL/assets/js/13.17092913.js"><link rel="prefetch" href="/TIL/assets/js/15.565546ed.js"><link rel="prefetch" href="/TIL/assets/js/16.d2238131.js"><link rel="prefetch" href="/TIL/assets/js/17.a133ce7e.js"><link rel="prefetch" href="/TIL/assets/js/18.f218ead6.js"><link rel="prefetch" href="/TIL/assets/js/19.b67c18ec.js"><link rel="prefetch" href="/TIL/assets/js/20.f56a7fd1.js"><link rel="prefetch" href="/TIL/assets/js/21.aab203c5.js"><link rel="prefetch" href="/TIL/assets/js/22.0f5ee716.js"><link rel="prefetch" href="/TIL/assets/js/23.adebe046.js"><link rel="prefetch" href="/TIL/assets/js/24.8747a99c.js"><link rel="prefetch" href="/TIL/assets/js/25.54b77906.js"><link rel="prefetch" href="/TIL/assets/js/26.a6dae2a7.js"><link rel="prefetch" href="/TIL/assets/js/27.27004f97.js"><link rel="prefetch" href="/TIL/assets/js/28.050b78e1.js"><link rel="prefetch" href="/TIL/assets/js/29.085a91e0.js"><link rel="prefetch" href="/TIL/assets/js/3.7a4b78ab.js"><link rel="prefetch" href="/TIL/assets/js/30.92dfddcd.js"><link rel="prefetch" href="/TIL/assets/js/4.c45a18a4.js"><link rel="prefetch" href="/TIL/assets/js/5.6dbf3872.js"><link rel="prefetch" href="/TIL/assets/js/6.a76351f6.js"><link rel="prefetch" href="/TIL/assets/js/7.4112101f.js"><link rel="prefetch" href="/TIL/assets/js/8.0aaa2330.js"><link rel="prefetch" href="/TIL/assets/js/9.a3d6fec7.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.13b71ac0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><img src="https://avatars.githubusercontent.com/u/53161335?v=4" alt="개발자 신종민" class="logo"> <span class="site-name can-hide">개발자 신종민</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Solution</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Books</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Database</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/Database/mongodb.html" aria-current="page" class="active sidebar-link">MongoDB</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#mongodb에-특성" class="sidebar-link">MongoDB에 특성</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#mongodb-vs-rdbms-mysql" class="sidebar-link">MongoDB vs RDBMS(MySql)</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#mongodb-배포-형태" class="sidebar-link">MongoDB 배포 형태</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#mmapv1-스토리지-엔진" class="sidebar-link">MMAPv1 스토리지 엔진</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#wiredtiger-스토리지-엔진" class="sidebar-link">WiredTiger 스토리지 엔진</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#b-tree-인덱스" class="sidebar-link">B-Tree 인덱스</a></li><li class="sidebar-sub-header"><a href="/TIL/Database/mongodb.html#mongodb-엔진의-잠금" class="sidebar-link">MongoDB 엔진의 잠금</a></li></ul></li><li><a href="/TIL/Database/mysql.html" class="sidebar-link">MySQL</a></li><li><a href="/TIL/Database/redis.html" class="sidebar-link">Redis</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vuepress</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Front</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ETC</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mongodb"><a href="#mongodb" class="header-anchor">#</a> MongoDB</h1> <h2 id="mongodb에-특성"><a href="#mongodb에-특성" class="header-anchor">#</a> MongoDB에 특성</h2> <ul><li>NoSQL</li> <li>스키마 프리(schema-free)</li> <li>비 관계형 데이터베이스</li></ul> <h2 id="mongodb-vs-rdbms-mysql"><a href="#mongodb-vs-rdbms-mysql" class="header-anchor">#</a> MongoDB vs RDBMS(MySql)</h2> <table><thead><tr><th>MongoDB</th> <th>RDBMS</th></tr></thead> <tbody><tr><td>데이터베이스(database)</td> <td>데이터 베이스(database)</td></tr> <tr><td>컬렉션(collection)</td> <td>테이블(table)</td></tr> <tr><td>도큐먼트(document)</td> <td>레코드(record or row)</td></tr> <tr><td>필드(field)</td> <td>컬럼(column)</td></tr> <tr><td>필드(field)</td> <td>컬럼(column)</td></tr> <tr><td>인덱스(index)</td> <td>인덱스(index)</td></tr> <tr><td>쿼리 결과로 &quot;cursor&quot; 반환</td> <td>쿼리 결과로 &quot;record&quot; 반환</td></tr></tbody></table> <h2 id="mongodb-배포-형태"><a href="#mongodb-배포-형태" class="header-anchor">#</a> MongoDB 배포 형태</h2> <h3 id="단일-노드"><a href="#단일-노드" class="header-anchor">#</a> 단일 노드</h3> <p>단일 노드로 몽고디비를 사용할 때에는 아무런 관리용 컴포넌트를 사용하지 않는다. 기존의 RDBMS가 작동하는 방식으로 몽고디비를 사용하는 형태라고 볼 수 있다.
+단일 노드 구성에서는 응용 프로그램의 몽고디비 드라이버가 몽고디비 서버로 직접 연결하게 되며, 별도의 레플리카 셋을 가지지 않으므로 서버가 응답 불능 상태라 하더라도
+자동 fail-over나 HA 기능이 작동할 수 없다. 주로 개발 서버에서 사용하는 형태이다.</p> <h3 id="단일-레플리카-셋-single-replica-set"><a href="#단일-레플리카-셋-single-replica-set" class="header-anchor">#</a> 단일 레플리카 셋(single replica-set)</h3> <p>레플리카셋 구축을 위해서는 추가의 몽고디비의 서버가 필요하다. 레플리카 셋은 특정 서버에 장애가 발생했을 때 자동 복구를 위한 최소 단위이므로 자동 복구가 필요하다면
+항상 레플리카 셋으로 몽고디비를 배포해야 함. 단일 노드로 접속할 때와 다르게 레플리카 셋 옵션을 사용해야 한다.<br>
+하나의 레플리카 셋은 항상 하나의 프라이머리 노드, 1개 이상의 세컨드리 노드로 구성되며, 프라이머리 노드는 사용자의 데이터 변경 요청을 받아서 처리하고, 세컨더리
+노드는 프라이머리 노드로부터 변경 내용을 전달 받아서 서로의 데이터를 동기화한다. 읽기 쿼리는 프라이머리 노드뿐만 아니라 필요하다면 세컨더리 노드로도 요청 가능하다.<br>
+몽고디비 레플리카셋은 항상 노드 간 투표를 통해서 프라이머리 노드를 결정하므로 가능한 홀수개로 구성해야 한다.<br>
+레플리카 셋을 3대의 서버로 구축하는 것이 낭비라고 생각된다면 아비터 모드를 생각해 볼 수 있다. 아비터 모드는 노드들과 하트비트만 주고받으며, 프라이머리 노드가 불능일 때
+프라이머리 노드 선출에만 참여한다. 아비터는 데이터를 저장하지 않고 있으므로 프라이머리 노드로 선출될 수 없다.</p> <h3 id="샤딩된-클러스터-sharded-cluster"><a href="#샤딩된-클러스터-sharded-cluster" class="header-anchor">#</a> 샤딩된 클러스터(sharded cluster)</h3> <p>샤딩된 클러스터 구조에서 하나 이상의 레플리카 셋이 필요하다. 각 레플리카 셋은 자신만의 파티션된 데이터를 가지게 된다. 샤딩된 클러스터에 참여하고 있는 각각의 레플리카 셋을
+샤드라고 하는데, 이 샤드들이 어떤 데이터를 가지는지에 대한 정보는 몽고디비 config 서버가 관리한다.<br>
+샤딩된 클러스터 구조에서는 몽고디비 드라이버가 직접 몽고디비 서버로 연결하도록 해서는 안되고, 몽고디비 라우터에 연결하여 컨피그 서버로 부터 각 샤드가 가지고 있는
+데이터에 대한 메타 정보를 참조하여 쿼리를 실행하는 방식으로 사용.</p> <h1 id="스토리지-엔진"><a href="#스토리지-엔진" class="header-anchor">#</a> 스토리지 엔진</h1> <h3 id="플러그인-스토리지-엔진"><a href="#플러그인-스토리지-엔진" class="header-anchor">#</a> 플러그인 스토리지 엔진</h3> <p>스토리지 엔진들은 사용자의 데이터를 디스크에 영구적으로 기록하거나 다시 읽어와서 메모리에 적재하는 역할을 담당한다.
+몽고디비 서버도 mysql 서버와 동일하게 다양한 스토리지 엔진을 사용할 수 있도록 플러그인 형태로 구현되어 있다. 하지만 몽고디비 스토리지 엔진은 하나의 인스턴스에서 동시에
+여러 개의 스토리지 엔진을 사용할 수는 없다. 즉, MMAPv1 스토리지 엔진과 WiredTiger 스토리지 엔진을 동시에 사용할 수 없다.<br>
+사용자가 데이터를 저장 혹은 조회하면 몽고디비 서버는 그 쿼리를 분석해서 어떻게 처리하면 효율적일지 판단한다. 옵티마이저(optimizer)라고 부르는 컴포넌트가 처리를 담당하는데,
+가장 중요한 역할이 최적화된 실행 계획을 수립하는 것이다.<br>
+옵티마이저가 실행계획을 수립하면 그 실행 계획에 맞게 디스크에서 데이터를 읽어오고 저장하는 작업을 해야하는데 이때 디스크에서 데이터를 어떻게 가져오고 어떻게 최적으로 저장할
+것인지 결정하는 부분이 스토리지 엔진이다.</p> <h3 id="mongodb-스토리지-엔진"><a href="#mongodb-스토리지-엔진" class="header-anchor">#</a> MongoDB 스토리지 엔진</h3> <p>현재 몽고디비 서버에는 다음과 같은 스토리지 엔진을 사용할 수 있다.</p> <ul><li>MMAPv1</li> <li>WiredTiger</li> <li>In-Memory</li> <li>RocksDB</li> <li>TokuDB</li></ul> <h2 id="mmapv1-스토리지-엔진"><a href="#mmapv1-스토리지-엔진" class="header-anchor">#</a> MMAPv1 스토리지 엔진</h2> <p>MMAPv1 스토리지 엔진은 자체적으로 내장된 캐시 기능이 없어서 OS의 캐시를 활용한다. 이는 리눅스나 윈도우의 캐시를 사용하기 때문에 커널이 제공하는 시스템 콜을 거치게 되므로
+오버헤드가 상대적으로 큰 편이다. 몽고디비 3.0 이전까지의 경험자들이 느끼는 대부분의 문제점이 MMAPv1 스토리지 엔진이 가지고 있던 단점일 것으로 보인다.<br>
+몽고디비 서버가 업그레이드 되면서 조금씩 MMAPv1 스토리지 사용 비율이 줄어들고 있다. 그만큼 MMAPv1 스토리지 엔진이 가지고 있는 단점이 많다. 그래서 몽고디비에서도 디폴트 스토리지 엔진인
+WiredTiger의 기능과 안정성에 집중하고 있다.</p> <h2 id="wiredtiger-스토리지-엔진"><a href="#wiredtiger-스토리지-엔진" class="header-anchor">#</a> WiredTiger 스토리지 엔진</h2> <p>몽고디비가 MMAPv1 문제점을 해결하고자 WiredTiger을 인수하고 몽고디비 서버의 스토리지 엔진으로 내장. WiredTiger 스토리지 엔진을 내장함으로써 단번에 상용 RDBMS가 가지고
+있는 고급 기능들을 모두 지원할 수 있게 되었다.</p> <h1 id="인덱스"><a href="#인덱스" class="header-anchor">#</a> 인덱스</h1> <h3 id="랜덤-i-o와-순차-i-o"><a href="#랜덤-i-o와-순차-i-o" class="header-anchor">#</a> 랜덤 I/O와 순차 I/O</h3> <p>랜덤 I/O는 디스크 원판을 돌려서 디스크 헤드를 읽어야 할 데이터가 저장된 위치로 이동시킨 다음 읽기를 하는 것을 의미. 그치만 순차 I/O 또한 이 작업은 동일하게 필요하다.<br>
+디스크의 부하는 얼마나 많은 데이터를 한 번에 기록하는지 보다는 얼마나 자주 디스크에 기록을 요청하는지에 의존적이다. 여러 번 쓰기를 요청하거나 읽기를 요청하는 작업이 훨씬 부하가 크다.<br>
+쿼리를 튜닝한다는 것은 얼마나 랜덤 I/O의 회수를 줄이느냐. 즉, 처리에 필요한 데이터만 읽도록 쿼리를 개선하는 것이다.</p> <h3 id="인덱스란"><a href="#인덱스란" class="header-anchor">#</a> 인덱스란?</h3> <p>DBMS 인덱스의 공통점 중에 중요한 것이 바로 정렬이다. 컬럼의 값을 주어진 순서로 미리 정렬해서 가지고 있다.<br>
+인덱스의 특성을 설명하기 위해 프로그래밍 언어의 자료 구조로 비교하면 SortedList, ArrayList라는 자료 구조로 나타낼 수 있다.<br>
+SortedListsms DBMS의 인덱스와 동일한 자료 구조이며, ArrayList는 데이터 파일과 동일한 자료 구조를 사용한다. 그렇다면 SortedList의 장단점을 통해
+인덱스의 장단점을 살펴보자.<br>
+SortedList 자료 구조는 데이터를 저장할 때마다 항상 값을 정렬해야 하므로 저장하는 과정이 느리고 복잡하지만, 이미 정렬되어 있기 때문에 원하는 값을 아주 빠르게 찾을 수 있다.
+DBMS의 인덱스도 동일하게 인덱스가 많은 테이블은 당연히 insert, update, delete의 문장 처리가 느리다.하지만 이미 정렬된 &quot;찾아보기&quot;용 표(인덱스)를 가지고 있기 때문에
+FIND(select) 쿼리는 매우 빠르게 처리 가능함.<br>
+결론적으로 DBMS의 인덱스는 데이터의 저장 성능을 희생해서 상대적으로 데이터의 읽기 속도를 향상시키는 존재이다. 주의할 점은 테이블의 인덱스를 하나 더 추가할지 말지는 데이터의 저장속도를
+어디까지 희생할 수 있으며, 읽기 속도를 얼마나 더 빠르게 만들어야 하는 지 조율하면서 결정해야 하는 것이다.</p> <h3 id="인덱스-역할별-분류"><a href="#인덱스-역할별-분류" class="header-anchor">#</a> 인덱스 역할별 분류</h3> <ul><li>프라이머리 키(primary key): 도큐먼트(레코드)를 대표하는 필드의 값으로 만들어진 인덱스를 의미. 이 필드는 테이블에서 해당 도큐먼트를 식별할 수 있는 기준값이 되므로
+식별자라고도 부름. NULL 값을 허용하지 않으며, 중복이 허용되지 않는 것이 특징. 프라이머리 키를 제외한 나머지 모든 인덱스는 보조 인덱스로 분류된다.</li> <li>보조 키(secondary key)</li> <li>데이터 저장 방식으로 구분하면 대표적으로 B-Tree 인덱스와 Hash 인덱스로 구분할 수 있다.</li></ul> <h2 id="b-tree-인덱스"><a href="#b-tree-인덱스" class="header-anchor">#</a> B-Tree 인덱스</h2> <p>B-Tree는 데이터베이스의 인덱싱 알고리즘으로 가장 일반적이고 오래된, 그러면서도 가장 데이터베이스의 범용적인 목적을 만족시키는 인덱스 알고리즘.</p> <h3 id="구조-및-특성"><a href="#구조-및-특성" class="header-anchor">#</a> 구조 및 특성</h3> <p>인덱스 리프 노드의 각 키 값은 테이블의 데이터 레코드를 찾아가기 위한 물리적인 주소 값을 가지고 있다. 인덱스의 키 값들은 모두 정렬돼 있지만, 테이블의 데이터 레코드는
+기본적으로 정렬돼 있지 않고 INSERT 된 순서대로 저장된다.</p> <h1 id="잠금"><a href="#잠금" class="header-anchor">#</a> 잠금</h1> <h3 id="exclusive-lock-배타적-잠금"><a href="#exclusive-lock-배타적-잠금" class="header-anchor">#</a> Exclusive lock (배타적 잠금)</h3> <p>읽기 잠금(Read lock)이라고도 불린다.
+어떤 트랜잭션에서 데이터를 읽고자 할 때 다른 shared lock은 허용이 되지만 exclusive lock은 불가하다.<br>
+쉽게 말해 리소스를 다른 사용자가 동시에 읽을 수 있게 하되 변경은 불가하게 하는 것이다.<br>
+=&gt; 어떤 자원에 shared lock이 동시에 여러개 적용될 수 있다.<br>
+=&gt; 어떤 자원에 shared lock이 하나라도 걸려있으면 exclusive lock을 걸 수 없다.</p> <h3 id="shared-lock-공유-잠금"><a href="#shared-lock-공유-잠금" class="header-anchor">#</a> Shared lock (공유 잠금)</h3> <p>쓰기 잠금(Write lock)이라고도 불린다.<br>
+어떤 트랜잭션에서 데이터를 변경하고자 할 때(ex . 쓰고자 할 때) 해당 트랜잭션이 완료될 때까지 해당 테이블 혹은 레코드(row)를 다른 트랜잭션에서 읽거나 쓰지 못하게 하기 위해 Exclusive lock을
+걸고 트랜잭션을 진행시키는 것이다.<br>
+=&gt; exclusive lock에 걸리면 shared lock을 걸 수 없다. (shared lock은 아래에서 설명)<br>
+=&gt; exclusive lock에 걸린 테이블,레코드등의 자원에 대해 다른 트랜잭션이 exclusive lock을 걸 수 없다.</p> <h2 id="mongodb-엔진의-잠금"><a href="#mongodb-엔진의-잠금" class="header-anchor">#</a> MongoDB 엔진의 잠금</h2> <p>몽고디비 서버에서도 멀티 쓰레드의 동시 처리 중에 발생할 수 있는 쓰레드 간의 충돌 문제를 막기 위해서 데이터베이스와 컬렉션 그리고 도큐먼트의 잠금을 사용한다.
+몽고디비 서버에서 제공하는 잠금은 크게 명시적 잠금과 묵시적 잠금으로 나눠볼 수 있다. 명시적 잠금은 글로벌 잠금뿐이며 나머지 모든 잠금은 묵시적 잠금이다.
+데이터베이스, 컬렉션에 대한 잠금은 모두 묵시적인 잠금이며, 이는 쿼리가 실행될 때 자동으로 획득됐다가 자동으로 해제되는 잠금이다.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/Docker/docker.html" class="prev">
+        Docker
+      </a></span> <span class="next"><a href="/TIL/Database/mysql.html">
+        MySQL
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.dc1d7481.js" defer></script><script src="/TIL/assets/js/2.24238b2e.js" defer></script><script src="/TIL/assets/js/14.507a7a1e.js" defer></script>
+  </body>
+</html>

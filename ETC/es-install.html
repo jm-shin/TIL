@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Homebrew로 elasticsearch 설치 | 개발자 신종민</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Today I Learned">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.13b71ac0.css" as="style"><link rel="preload" href="/TIL/assets/js/app.dc1d7481.js" as="script"><link rel="preload" href="/TIL/assets/js/2.24238b2e.js" as="script"><link rel="preload" href="/TIL/assets/js/18.f218ead6.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.2d1379bb.js"><link rel="prefetch" href="/TIL/assets/js/11.ae4eb815.js"><link rel="prefetch" href="/TIL/assets/js/12.9b97d1f8.js"><link rel="prefetch" href="/TIL/assets/js/13.17092913.js"><link rel="prefetch" href="/TIL/assets/js/14.507a7a1e.js"><link rel="prefetch" href="/TIL/assets/js/15.565546ed.js"><link rel="prefetch" href="/TIL/assets/js/16.d2238131.js"><link rel="prefetch" href="/TIL/assets/js/17.a133ce7e.js"><link rel="prefetch" href="/TIL/assets/js/19.b67c18ec.js"><link rel="prefetch" href="/TIL/assets/js/20.f56a7fd1.js"><link rel="prefetch" href="/TIL/assets/js/21.aab203c5.js"><link rel="prefetch" href="/TIL/assets/js/22.0f5ee716.js"><link rel="prefetch" href="/TIL/assets/js/23.adebe046.js"><link rel="prefetch" href="/TIL/assets/js/24.8747a99c.js"><link rel="prefetch" href="/TIL/assets/js/25.54b77906.js"><link rel="prefetch" href="/TIL/assets/js/26.a6dae2a7.js"><link rel="prefetch" href="/TIL/assets/js/27.27004f97.js"><link rel="prefetch" href="/TIL/assets/js/28.050b78e1.js"><link rel="prefetch" href="/TIL/assets/js/29.085a91e0.js"><link rel="prefetch" href="/TIL/assets/js/3.7a4b78ab.js"><link rel="prefetch" href="/TIL/assets/js/30.92dfddcd.js"><link rel="prefetch" href="/TIL/assets/js/4.c45a18a4.js"><link rel="prefetch" href="/TIL/assets/js/5.6dbf3872.js"><link rel="prefetch" href="/TIL/assets/js/6.a76351f6.js"><link rel="prefetch" href="/TIL/assets/js/7.4112101f.js"><link rel="prefetch" href="/TIL/assets/js/8.0aaa2330.js"><link rel="prefetch" href="/TIL/assets/js/9.a3d6fec7.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.13b71ac0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><img src="https://avatars.githubusercontent.com/u/53161335?v=4" alt="개발자 신종민" class="logo"> <span class="site-name can-hide">개발자 신종민</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Solution</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Books</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vuepress</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Front</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ETC</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/ETC/es-install.html" aria-current="page" class="active sidebar-link">Homebrew로 elasticsearch 설치</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/ETC/es-install.html#homebrew로-elasticsearch-설치" class="sidebar-link">Homebrew로 elasticsearch 설치</a></li><li class="sidebar-sub-header"><a href="/TIL/ETC/es-install.html#elasticsearch-서버-실행" class="sidebar-link">elasticsearch 서버 실행</a></li><li class="sidebar-sub-header"><a href="/TIL/ETC/es-install.html#homebrew로-kibana-설치" class="sidebar-link">Homebrew로 kibana 설치</a></li><li class="sidebar-sub-header"><a href="/TIL/ETC/es-install.html#homebrew-명령어" class="sidebar-link">Homebrew 명령어</a></li></ul></li><li><a href="/TIL/ETC/git.html" class="sidebar-link">Git</a></li><li><a href="/TIL/ETC/setting.html" class="sidebar-link">맥북프로 m1 초기 개발자 설정</a></li><li><a href="/TIL/ETC/webstorm-keymap.html" class="sidebar-link">WebStorm 단축키 정리 for Mac</a></li><li><a href="/TIL/ETC/문제-접근법.html" class="sidebar-link">문제 접근법</a></li><li><a href="/TIL/ETC/애플리케이션-설계.html" class="sidebar-link">애플리케이션 설계</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="homebrew로-elasticsearch-설치"><a href="#homebrew로-elasticsearch-설치" class="header-anchor">#</a> Homebrew로 elasticsearch 설치</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># elastic/tap 저장소에 탭</span>
+brew tap elastic/tap
+
+<span class="token comment"># eleasticsearch install</span>
+brew <span class="token function">install</span> elastic/tap/elasticsearch-full
+</code></pre></div><h2 id="elasticsearch-서버-실행"><a href="#elasticsearch-서버-실행" class="header-anchor">#</a> elasticsearch 서버 실행</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 실행</span>
+elasticsearch
+</code></pre></div><h3 id="mac에서-elasticsearch-실행-시-unsupported-os-error-발생시-해결-방법"><a href="#mac에서-elasticsearch-실행-시-unsupported-os-error-발생시-해결-방법" class="header-anchor">#</a> mac에서 elasticsearch 실행 시 unsupported OS ERROR 발생시 해결 방법</h3> <p>elasticsearch.yml 에서 아래 설정을 추가.</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># elasticsearch.yml의 위치 확인</span>
+<span class="token function">find</span> / <span class="token parameter variable">-name</span> elasticsearch.yml
+
+<span class="token comment"># elasticsearch.yml 편집</span>
+<span class="token function">vi</span> /opt/homebrew/etc/elasticsearch/elasticsearch.yml
+
+<span class="token comment"># elasticsearch.yml에 아래 설정 추가</span>
+xpack.ml.enabled: <span class="token boolean">false</span>
+
+<span class="token comment"># GET 메서드로 elasticsearch 클러스터 조회</span>
+<span class="token function">curl</span> <span class="token parameter variable">-XGET</span> <span class="token string">&quot;http://localhost:9200&quot;</span>
+</code></pre></div><h2 id="homebrew로-kibana-설치"><a href="#homebrew로-kibana-설치" class="header-anchor">#</a> Homebrew로 kibana 설치</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># elastic/tap 저장소 이미 생성했다면 생략 가능</span>
+brew tap elastic/tap
+
+<span class="token comment"># kibana 설치</span>
+brew <span class="token function">install</span> elastic/tap/kibana-full
+
+<span class="token comment"># kibana 실행</span>
+kibana
+</code></pre></div><p>Kibana를 실행한 뒤 웹 브라우저를 열고 http://localhost:5601 로 접속</p> <h2 id="homebrew-명령어"><a href="#homebrew-명령어" class="header-anchor">#</a> Homebrew 명령어</h2> <p>https://docs.brew.sh/Manpage</p> <div class="language-shell extra-class"><pre class="language-shell"><code>brew upgrade <span class="token punctuation">[</span>프로그램명<span class="token punctuation">]</span>: homebrew에 설치된 프로그램 최선버전으로 업데이트
+brew tap: 패키지 저장소 확인
+brew tap <span class="token punctuation">[</span>저장소태그<span class="token punctuation">]</span>: 패키지 저장소 추가
+brew untap <span class="token punctuation">[</span>저장소태그<span class="token punctuation">]</span>: 패키지 저장소 삭제
+brew search <span class="token punctuation">[</span>프로그램명<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> homebrew를 통해 설치 가능한 프로그램 찾기
+brew list <span class="token punctuation">[</span>cask<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> horebrew 에 설치된 프로그램 목록
+brew info <span class="token punctuation">[</span>cask<span class="token punctuation">]</span> <span class="token punctuation">[</span>프로그램명<span class="token punctuation">]</span>: 프로그램 정보 보기
+brew <span class="token function">install</span> <span class="token punctuation">[</span>cask<span class="token punctuation">]</span> <span class="token punctuation">[</span>프로그램명<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> 프로그램 설치
+brew remove <span class="token punctuation">[</span>cask<span class="token punctuation">]</span> <span class="token punctuation">[</span>프로그램명<span class="token punctuation">]</span> <span class="token builtin class-name">:</span> homebrew에 설치된 프로그램 삭제
+brew cleanup <span class="token builtin class-name">:</span> 업데이트 후 필요없는 이전 버전의 패키지 삭제
+brew doctor: homebrew 의 현재상태 진단
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/Front/CSR-SSR.html" class="prev">
+        브라우저 렌더링 과정 이해하기
+      </a></span> <span class="next"><a href="/TIL/ETC/git.html">
+        Git
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.dc1d7481.js" defer></script><script src="/TIL/assets/js/2.24238b2e.js" defer></script><script src="/TIL/assets/js/18.f218ead6.js" defer></script>
+  </body>
+</html>

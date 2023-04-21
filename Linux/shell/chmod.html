@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>chmod | 개발자 신종민</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Today I Learned">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.13b71ac0.css" as="style"><link rel="preload" href="/TIL/assets/js/app.dc1d7481.js" as="script"><link rel="preload" href="/TIL/assets/js/2.24238b2e.js" as="script"><link rel="preload" href="/TIL/assets/js/25.54b77906.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.2d1379bb.js"><link rel="prefetch" href="/TIL/assets/js/11.ae4eb815.js"><link rel="prefetch" href="/TIL/assets/js/12.9b97d1f8.js"><link rel="prefetch" href="/TIL/assets/js/13.17092913.js"><link rel="prefetch" href="/TIL/assets/js/14.507a7a1e.js"><link rel="prefetch" href="/TIL/assets/js/15.565546ed.js"><link rel="prefetch" href="/TIL/assets/js/16.d2238131.js"><link rel="prefetch" href="/TIL/assets/js/17.a133ce7e.js"><link rel="prefetch" href="/TIL/assets/js/18.f218ead6.js"><link rel="prefetch" href="/TIL/assets/js/19.b67c18ec.js"><link rel="prefetch" href="/TIL/assets/js/20.f56a7fd1.js"><link rel="prefetch" href="/TIL/assets/js/21.aab203c5.js"><link rel="prefetch" href="/TIL/assets/js/22.0f5ee716.js"><link rel="prefetch" href="/TIL/assets/js/23.adebe046.js"><link rel="prefetch" href="/TIL/assets/js/24.8747a99c.js"><link rel="prefetch" href="/TIL/assets/js/26.a6dae2a7.js"><link rel="prefetch" href="/TIL/assets/js/27.27004f97.js"><link rel="prefetch" href="/TIL/assets/js/28.050b78e1.js"><link rel="prefetch" href="/TIL/assets/js/29.085a91e0.js"><link rel="prefetch" href="/TIL/assets/js/3.7a4b78ab.js"><link rel="prefetch" href="/TIL/assets/js/30.92dfddcd.js"><link rel="prefetch" href="/TIL/assets/js/4.c45a18a4.js"><link rel="prefetch" href="/TIL/assets/js/5.6dbf3872.js"><link rel="prefetch" href="/TIL/assets/js/6.a76351f6.js"><link rel="prefetch" href="/TIL/assets/js/7.4112101f.js"><link rel="prefetch" href="/TIL/assets/js/8.0aaa2330.js"><link rel="prefetch" href="/TIL/assets/js/9.a3d6fec7.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.13b71ac0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><img src="https://avatars.githubusercontent.com/u/53161335?v=4" alt="개발자 신종민" class="logo"> <span class="site-name can-hide">개발자 신종민</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TIL/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/TIL/About/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Solution</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Books</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/Linux/shell/chmod.html" aria-current="page" class="active sidebar-link">chmod</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/Linux/shell/chmod.html#chmod-명령-사용-예제" class="sidebar-link">chmod 명령 사용 예제</a></li></ul></li><li><a href="/TIL/Linux/shell/lsof.html" class="sidebar-link">[Mac] listen 포트 &amp; pid 확인 방법, TCP/UDP 세션 확인 방법</a></li><li><a href="/TIL/Linux/서버문제-해결을-위한-명령어.html" class="sidebar-link">Linux 서버 문제를 해결하기 위한 유용한 명령어들</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Database</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vuepress</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Front</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ETC</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="chmod"><a href="#chmod" class="header-anchor">#</a> chmod</h1> <p>chmod 명령은 파일의 권한을 변경할 수 있게 만들어주는 명령어. change와 mode의 앞 글자들을 조합한 이름(chmod = ch + mod)<br>
+여기서 모드는 읽기, 쓰기, 실행과 각각의 권한을 지정할 대상(파일의 소유자, 그룹, 그외 사용자)을 포함한 파일의 속성을 말함. 이러한 모든 설정을
+통틀어 모드(mode)라 지칭함. <strong>chmod 명령을 사용하여 파일의 모드를 변경한다는 것은 파일의 권한을 변경한다는 것과 동일.</strong></p> <h2 id="chmod-명령-사용-예제"><a href="#chmod-명령-사용-예제" class="header-anchor">#</a> chmod 명령 사용 예제</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">chmod</span> u+x FILE                    <span class="token comment"># 파일 소유 사용자에게 실행권한 추가.</span>
+
+$ <span class="token function">chmod</span> u+w FILE                    <span class="token comment"># 파일 소유 사용자에게 쓰기 권한 추가.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">u</span><span class="token operator">=</span>rwx FILE                  <span class="token comment"># 파일 소유 사용자에게 읽기, 쓰기, 실행 권한 지정.</span>
+
+$ <span class="token function">chmod</span> u-x FILE                    <span class="token comment"># 파일 소유 사용자의 실행 권한 제거.</span>
+
+$ <span class="token function">chmod</span> g+w FILE                    <span class="token comment"># 파일 소유 그룹에 쓰기 권한 추가.</span>
+
+$ <span class="token function">chmod</span> g-x FILE                    <span class="token comment"># 파일 소유 그룹의 실행 권한 제거.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">o</span><span class="token operator">=</span>r FILE                    <span class="token comment"># 파일 소유 사용자 및 그룹을 제외한 사용자는 읽기만 가능.</span>
+
+$ <span class="token function">chmod</span> a-x *                       <span class="token comment"># 현재 디렉토리의 모든 파일에서 모든 사용자의 읽기 권한 제거.</span>
+
+$ <span class="token function">chmod</span> a-w FILE                    <span class="token comment"># 모든 사용자에 대해 쓰기 권한 제거.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">u</span><span class="token operator">=</span>rwx,g<span class="token operator">=</span>r FILE              <span class="token comment"># 파일 소유 사용자는 모든 권한, 그룹은 읽기만 가능.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">ug</span><span class="token operator">=</span>rw FILE                  <span class="token comment"># 파일 소유 사용자와 그룹이 읽기, 쓰기 가능.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">g</span><span class="token operator">=</span>rw,o<span class="token operator">=</span>r FILE               <span class="token comment"># 파일 소유 그룹은 읽기, 쓰기 가능, 그 외 사용자는 읽기만 가능.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">ug</span><span class="token operator">=</span>rw,o<span class="token operator">=</span>r FILE              <span class="token comment"># 파일 소유 사용자 및 그룹은 일기, 쓰기 가능, 그외 사용자는 읽기만 가능.</span>
+
+$ <span class="token function">chmod</span> 000 FILE                    <span class="token comment"># 모든 사용자의 모든 권한 제거. = ---------</span>
+
+$ <span class="token function">chmod</span> <span class="token number">664</span> FILE                    <span class="token comment"># 사용자(읽기+쓰기), 그룹(읽기+쓰기), 그외 사용자(읽기) = rw-rw-r--</span>
+
+$ <span class="token function">chmod</span> <span class="token number">755</span> FILE                    <span class="token comment"># 사용자(읽기+쓰기+실행), 그룹(읽기+실행), 그외 사용자(읽기+실행) = rwxr-xr-x</span>
+
+$ <span class="token function">chmod</span> <span class="token number">777</span> FILE                    <span class="token comment"># 모든 사용자에 모든 권한 추가.</span>
+
+$ <span class="token function">chmod</span> <span class="token parameter variable">-R</span> g+x DIR                  <span class="token comment"># DIR 디렉토리 하위 모든 파일 및 디렉토리에 그룹 실행(x) 권한 추가.</span>
+
+$ <span class="token function">chmod</span> <span class="token parameter variable">-R</span> o-wx *                   <span class="token comment"># 현재 디렉토리의 모든 파일에서 그외 사용자의 쓰기, 실행 권한 제거</span>
+
+$ <span class="token function">chmod</span> <span class="token parameter variable">-R</span> a-x,a+X *                <span class="token comment"># 현재 디렉토리 기준 모든 파일 읽기 권한 제거, 디렉토리 실행 권한 추가.</span>
+
+$ <span class="token function">chmod</span> <span class="token parameter variable">-R</span> a-x+X *                  <span class="token comment"># 위(chmod -R a-x,a+X *)와 동일.</span>
+
+$ <span class="token function">chmod</span> <span class="token assign-left variable">u</span><span class="token operator">=</span>g FILE                    <span class="token comment"># FILE의 그룹 권한 값을 사용자 권한으로 적용.</span>
+    $ <span class="token function">ls</span> <span class="token parameter variable">-l</span>
+    -rwxr--r-- <span class="token number">1</span> ppotta manager   <span class="token number">23</span> Mar <span class="token number">26</span> 04:13 FILE
+    $ <span class="token function">chmod</span> <span class="token assign-left variable">u</span><span class="token operator">=</span>g FILE
+    -r--r--r-- <span class="token number">1</span> ppotta manager   <span class="token number">23</span> Mar <span class="token number">26</span> 04:13 FILE
+
+$ <span class="token function">chmod</span> u+g FILE                    <span class="token comment"># FILE의 사용자 권한에 그룹 권한 값을 추가.</span>
+    $ <span class="token function">ls</span> <span class="token parameter variable">-l</span>
+    -r-x-w--w- <span class="token number">1</span> ppotta manager   <span class="token number">23</span> Mar <span class="token number">26</span> 04:13 FILE
+    $ <span class="token function">chmod</span> u+g FILE
+    -rwx-w--w- <span class="token number">1</span> ppotta manager   <span class="token number">23</span> Mar <span class="token number">26</span> 04:13 FILE
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/Books/함께자라기.html" class="prev">
+        함께 자라기
+      </a></span> <span class="next"><a href="/TIL/Linux/shell/lsof.html">
+        [Mac] listen 포트 &amp; pid 확인 방법, TCP/UDP 세션 확인 방법
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.dc1d7481.js" defer></script><script src="/TIL/assets/js/2.24238b2e.js" defer></script><script src="/TIL/assets/js/25.54b77906.js" defer></script>
+  </body>
+</html>
