@@ -67,6 +67,28 @@ s 해시값 remove one, two
 4. 수정이 마무리되면 :wq로 편집화면 저장
 5. 커밋 메시지 하나로 통합해서 적어주기
 
+### 리베이스
+
+Git이 merge commit을 적절하게 처리하여 충돌을 최소화하고 히스토리를 깔끔하게 유지.
+
+rebase 할 때, --rebase-merges 옵션 사용.
+
+```shell
+git rebase origin/develop --rebase-merges
+```
+
+### 리베이스 명령어
+
+```shell
+# 현재 리베이스 작업을 계속
+git rebase --continue
+```
+
+```shell
+# 리베이스 작업을 중단하고 이전 상태로 돌아가기. 리베이스 작업을 취소하고 이전 상태로 되돌립니다.
+git rebase --abort
+```
+
 ## Git Flow
 
 1. checkout origin develop
@@ -81,9 +103,9 @@ s 해시값 remove one, two
 10. master 브랜치로 - git switch master
 11. git merge release/<배포버전>
 12. git tag <배포버전> && git push origin <배포버전>
-13. 원격 마스터에 git push 
-14. develop 브랜치 이동 후 -> 배포된 태그(<배포버전>) 병합 
-15. release/<배포버전> 브랜치 삭제. 
+13. 원격 마스터에 git push
+14. develop 브랜치 이동 후 -> 배포된 태그(<배포버전>) 병합
+15. release/<배포버전> 브랜치 삭제.
 16. 배포 후 특이사항 없으면 병합 완료된 feature 브랜치도 삭제
 
 ## Error Case
