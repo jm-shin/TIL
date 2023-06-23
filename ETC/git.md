@@ -89,6 +89,12 @@ git rebase --continue
 git rebase --abort
 ```
 
+### rebase 할 때, --rebase-merges 옵션 사용   
+--rebase-merges 옵션을 사용하면 리베이스 작업 중에 머지 커밋을 유지할 수 있습니다. 이 옵션을 사용하면 리베이스 도중에 발생한 머지 커밋들도 새로운 커밋 그래프에 포함되며, 그래프가 재구성될 때 머지 커밋들이 변형되지 않습니다. 따라서 최종적으로 리베이스된 브랜치는 머지 커밋을 포함한 완전한 커밋 히스토리를 가지게 됩니다.
+```shell
+git rebase origin/develop --rebase-merges
+```
+
 ## Git Flow
 
 1. checkout origin develop
